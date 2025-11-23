@@ -147,20 +147,156 @@ export default function RegisterScreen() {
             <View
               style={[
                 styles.modalCard,
-                { width: isWide ? '92%' : '95%', maxWidth: 600 },
+                { width: isWide ? '92%' : '95%', maxWidth: 800 },
               ]}
             >
-              <Text style={styles.modalTermsText}>
-                Al acceder y utilizar este sitio web de servicios de comida y domicilios, aceptas los
-                presentes Términos, Condiciones y Política de Privacidad. Te pedimos leer
-                cuidadosamente este documento, ya que explica el uso permitido del sitio, cómo
-                gestionamos los pedidos y cómo protegemos tu información personal. Este documento
-                aplica a todos los usuarios que navegan, realizan pedidos o interactúan con nuestra
-                plataforma.
-              </Text>
-              <Pressable style={styles.continueButton} onPress={handleContinue}>
-                <Text style={styles.continueButtonText}>Continuar</Text>
-              </Pressable>
+              <Text style={styles.modalTitle}>Términos y Condiciones</Text>
+
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Aceptación de los términos</Text>
+                <Text style={styles.sectionText}>
+                  Al utilizar SENAFOOD, aceptas de forma plena y sin reservas los presentes Términos
+                  y Condiciones, así como las políticas de privacidad y seguridad de datos. Si no
+                  estás de acuerdo con alguna parte de estos términos, te recomendamos que no utilices
+                  la plataforma.
+                </Text>
+              </View>
+
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Registro y cuenta del usuario</Text>
+                <View style={styles.bulletList}>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      El usuario debe registrarse con información veraz, completa y actualizada
+                      (nombre, documento, correo, teléfono, etc.).
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      El usuario es responsable de mantener la confidencialidad de sus credenciales
+                      de acceso.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      En caso de olvido o pérdida de contraseña, el sistema ofrece un proceso de
+                      recuperación seguro mediante correo electrónico.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      No se permite el uso indebido o fraudulento de la plataforma.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      El usuario puede eliminar su cuenta en cualquier momento desde su perfil.
+                    </Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Uso del sistema</Text>
+                <View style={styles.bulletList}>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      La plataforma SENAFOOD es de uso exclusivo para la comunidad interna del SENA
+                      Salomia.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      Los usuarios pueden visualizar el menú, realizar pedidos, efectuar pagos
+                      (efectivo o Nequi), revisar su historial y enviar comentarios.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      Se prohíbe el uso del sistema con fines fraudulentos, actividades comerciales
+                      externas o cualquier acción que comprometa la integridad del servicio.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      No se permite el uso indebido o fraudulento de la plataforma.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      El administrador se reserva el derecho de suspender o eliminar cuentas que
+                      violen estos términos.
+                    </Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Pagos y pedidos</Text>
+                <View style={styles.bulletList}>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      Los pedidos solo se procesarán una vez confirmada la transacción o método de
+                      pago.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      El usuario podrá cancelar un pedido solo si aún no ha sido procesado o
+                      entregado.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      Los métodos de pago disponibles son efectivo y Nequi, gestionados bajo
+                      procesos seguros de verificación y encriptación.
+                    </Text>
+                  </View>
+                  <View style={styles.bulletRow}>
+                    <Text style={styles.bulletDot}>•</Text>
+                    <Text style={styles.bulletText}>
+                      Los precios, disponibilidad y descripciones de productos pueden variar según el
+                      día.
+                    </Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Protección de datos personales</Text>
+                <Text style={styles.sectionText}>
+                  SENAFOOD cumple con la Ley 1581 de 2012 sobre protección de datos personales y las
+                  normativas locales de comercio electrónico. Los datos personales y financieros se
+                  almacenan de forma segura y encriptada, y no serán compartidos con terceros sin la
+                  autorización explícita del usuario.
+                </Text>
+                <Text style={[styles.sectionText, { marginTop: 12 }]}>
+                  Tu información será tratada de forma segura según las políticas del SENA y la Ley
+                  de Protección de Datos Personales.
+                </Text>
+              </View>
+
+              <View style={styles.modalButtonsRow}>
+                <Pressable style={styles.acceptButton} onPress={handleContinue}>
+                  <Text style={styles.acceptButtonText}>Aceptar y continuar</Text>
+                </Pressable>
+                <Pressable style={styles.closeButton} onPress={() => setShowTerms(false)}>
+                  <Text style={styles.closeButtonText}>Cerrar</Text>
+                </Pressable>
+              </View>
             </View>
           </ScrollView>
         </View>
@@ -309,22 +445,77 @@ const styles = StyleSheet.create({
     elevation: 5,
     alignSelf: 'center',
   },
-  modalTermsText: {
+  modalTitle: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: TEXT,
+    textAlign: 'center',
+    marginBottom: 24,
+  },
+  section: {
+    marginBottom: 20,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: TEXT,
+    marginBottom: 12,
+  },
+  sectionText: {
     color: TEXT,
     fontSize: 15,
     lineHeight: 22,
-    marginBottom: 24,
     textAlign: 'left',
   },
-  continueButton: {
+  bulletList: {
+    marginTop: 8,
+    gap: 10,
+  },
+  bulletRow: {
+    flexDirection: 'row',
+    gap: 10,
+    alignItems: 'flex-start',
+  },
+  bulletDot: {
+    color: ACCENT,
+    fontSize: 18,
+    lineHeight: 22,
+    marginTop: 2,
+  },
+  bulletText: {
+    color: TEXT,
+    fontSize: 15,
+    lineHeight: 22,
+    flex: 1,
+  },
+  modalButtonsRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginTop: 24,
+  },
+  acceptButton: {
+    flex: 1,
     backgroundColor: ACCENT,
     borderRadius: 8,
     paddingVertical: 14,
     alignItems: 'center',
-    width: '100%',
   },
-  continueButtonText: {
+  acceptButtonText: {
     color: '#fff',
+    fontWeight: '700',
+    fontSize: 16,
+  },
+  closeButton: {
+    flex: 1,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    paddingVertical: 14,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#e0e0e0',
+  },
+  closeButtonText: {
+    color: TEXT,
     fontWeight: '700',
     fontSize: 16,
   },
