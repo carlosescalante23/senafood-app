@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
-import { Link } from 'expo-router'
-import { Input } from '@/components/ui/Input'
-import { Button } from '@/components/ui/Button'
-import { Logo } from '@/components/ui/Logo'
 import { AuthLayout } from '@/components/ui/AuthLayout'
+import { Button } from '@/components/ui/Button'
+import { Input } from '@/components/ui/Input'
+import { Logo } from '@/components/ui/Logo'
+import { Link, router } from 'expo-router'
+import React, { useState } from 'react'
+import { Text, TouchableOpacity, View } from 'react-native'
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('')
@@ -42,8 +42,8 @@ const LoginScreen = () => {
 
         <View className="mt-6">
           <Button
-            title="INICIAR SESIÓN"
-            onPress={handleLogin}
+            title="Iniciar sesión"
+            onPress={()=>{router.push('/(drawer)/home')}}
             fullWidth
             variant="primary"
             className="rounded-full py-3 shadow-none"

@@ -1,15 +1,20 @@
 import { DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Image, View } from 'react-native'
 
 const CustomDrawer = (props: DrawerContentComponentProps) => {
   return (
     <DrawerContentScrollView {...props} scrollEnabled={false}>
-        <View className='flex justify-center items-center mx-3 p-10 mb-10 h-[150px] rounded-xl bg-primary'>
-            <View className='flex justify-center items-center bg-primary-50 rounded-full h-24 w-24'>
-                <Text className='text-primary text-5xl'>SF</Text>
-            </View>
-        </View>
+        <View className="mx-3 mb-10 rounded-xl overflow-hidden h-[150px]">
+          <Image 
+          source={require('../../assets/images/logo.png')}
+          style={{
+              width: '100%',
+              height: '100%',
+          }}
+          resizeMode="contain" // evita que se recorte el logo
+          />
+        </View>   
 
         <DrawerItemList {...props} />
     </DrawerContentScrollView>
